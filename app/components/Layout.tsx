@@ -22,7 +22,7 @@ const Layout: React.FC = ({ children }) => {
         logout()
       }
     })()
-  }, [login, logout])
+  }, [])
 
   return (
     <div className="flex flex-col min-h-screen">
