@@ -47,13 +47,10 @@ export const AuthProvider = ({ children }: Props) => {
 
   const startRefreshTimer = (expiration: number): void => {
     let refreshTimer = setInterval(() => {
-      console.log('silently refreshing token')
       API.post(`refresh_token`, {}, { withCredentials: true }).then(async data => {
         if (data.data.ok === 'true') {
-          console.log('refresh succes', data)
           setAccessToken(data.data.accessToken)
         } else {
-          console.log('refresh not succesfull')
           clearInterval(refreshTimer);
           logout()
         }
