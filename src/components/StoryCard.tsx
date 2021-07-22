@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Story } from '../types'
+import { Story } from '../../types'
 
 interface Props {
   story: Story,
