@@ -54,6 +54,8 @@ const Edit: React.FC = ({story}: InferGetServerSidePropsType<typeof getServerSid
       });
 
       photo_url = upload_url.data.split('?')[0];      
+    } else {
+      photo_url = story.photo_url;
     }
 
     await API.put(`/stories/${story.id}`, { title, content, photo_url }, {headers: {'Authorization': `${accessToken}`}, withCredentials: true})
