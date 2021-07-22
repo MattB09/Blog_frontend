@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }: Props) => {
       console.log('silently refreshing token')
       API.post(`refresh_token`, {}, { withCredentials: true }).then(async data => {
         if (data.data.ok === 'true') {
-          console.log('refresh succes')
+          console.log('refresh succes', data)
           setAccessToken(data.data.at)
         } else {
           console.log('refresh not succesfull')
