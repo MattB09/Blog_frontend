@@ -15,11 +15,12 @@ const Layout: React.FC = ({ children }) => {
         logout()
         return
       }
-      const result: AxiosResponse = await API.post(`/refresh_token`, {}, {withCredentials: true})
-      if (result.data.ok === 'true') {
+      try {
+        const result: AxiosResponse = await API.post(`/refresh_token`, {}, {withCredentials: true})
         login({ at: result.data.accessToken, expire: result.data.expire })
-      } else {
+      } catch (e) {
         logout()
+        console.log(e)
       }
     })()
   }, [])
