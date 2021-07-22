@@ -51,7 +51,7 @@ export const AuthProvider = ({ children }: Props) => {
       API.post(`refresh_token`, {}, { withCredentials: true }).then(async data => {
         if (data.data.ok === 'true') {
           console.log('refresh succes', data)
-          setAccessToken(data.data.at)
+          setAccessToken(data.data.accessToken)
         } else {
           console.log('refresh not succesfull')
           clearInterval(refreshTimer);
