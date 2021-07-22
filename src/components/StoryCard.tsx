@@ -37,7 +37,7 @@ const StoryCard: React.FC<Props> = ({story, myStack, deleteFunc}) => {
         )}
 
         {/* title and content */}
-        <h2 className="text-lg font-semibold mb-4">{story.title}</h2>
+        <h2 className="text-xlg font-semibold mb-4">{story.title}</h2>
 
         {/* Photo */}
         { story.photo_url !== null && (
