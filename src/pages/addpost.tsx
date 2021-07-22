@@ -16,7 +16,8 @@ const AddPost:React.FC = () => {
     if (status === 'unathenticated') {
       router.push('/')
     }
-  }, [status, router])
+    console.log('accessToken from useEffect', accessToken)
+  }, [status, router, accessToken])
 
   const handlePostSubmit = async (clickEvent:FormEvent<HTMLFormElement>): Promise<void> => {
     clickEvent.preventDefault()
