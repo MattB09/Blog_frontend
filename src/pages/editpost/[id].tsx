@@ -21,6 +21,7 @@ const Edit: React.FC = ({story}: InferGetServerSidePropsType<typeof getServerSid
   const [content, setContent] = useState<string>(story.content)
   const [photoFile, setPhotoFile] = useState<File | null>(null)
   const [photoName, setPhotoName] = useState<string>(story.photo_url === null ? "" : story.photo_url.split('/').slice(-1))
+  const [photoWasChanged, setPhotoWasChanged] = useState<boolean>(false)
 
   useEffect(() => {
     if (status === 'unauthenticated') {
@@ -54,10 +55,12 @@ const Edit: React.FC = ({story}: InferGetServerSidePropsType<typeof getServerSid
       });
 
       photo_url = upload_url.data.split('?')[0];      
-    } else {
+    } else if (!photoWasChanged) {
       photo_url = story.photo_url;
     }
 
+    setPhotoWasChanged(false)
+    
     await API.put(`/stories/${story.id}`, { title, content, photo_url }, {headers: {'Authorization': `${accessToken}`}, withCredentials: true})
 
     router.push(`/myposts`)
@@ -69,6 +72,7 @@ const Edit: React.FC = ({story}: InferGetServerSidePropsType<typeof getServerSid
 
     setPhotoFile(file)
     setPhotoName(file !== null ? file.name : "")
+    setPhotoWasChanged(true)
   }
 
   return (
