@@ -42,7 +42,6 @@ const StoryCard: React.FC<Props> = ({story, myStack, deleteFunc}) => {
         {/* Photo */}
         { story.photo_url !== null && (
           <div className="mb-4 h-60 rounded overflow-hidden flex align-middle justify-center bg-gray-200">
-            { console.log(story.photo_url)}
             {/* Next.js is having a problem with optimizing s3 images. https://github.com/vercel/next.js/issues/23523 supposed to be
             fixed with the next release of Next@canary for now, use unoptimized image.*/}
             <Image src={story.photo_url} alt="post's image" width={350} height={200} unoptimized={true} objectFit="contain" />

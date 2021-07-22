@@ -45,7 +45,6 @@ const SignIn: React.FC = () => {
 
     try {
       const result = await API.post(`/signup`, {signupEmail, signupPassword}, {withCredentials: true})
-      console.log(result)
       login({ at: result.data.accessToken, expire: result.data.expire })
       router.push('/')
     } catch (err) {
