@@ -4,19 +4,15 @@ This repo is the front end portion of a blogging app that allows users to write 
 
 Visit the site here: https://next-js-tailwind-three.vercel.app/
 
-## Screenshots --- to be updated
-![Home-fs](https://user-images.githubusercontent.com/29540686/125395675-716ec480-e3e6-11eb-8291-9267d9cc78bf.JPG)
-
-![signin-fs](https://user-images.githubusercontent.com/29540686/125395794-9a8f5500-e3e6-11eb-9b5d-4f5f28496e72.JPG)
-
-![edit-fs](https://user-images.githubusercontent.com/29540686/125395807-9fec9f80-e3e6-11eb-98cd-df551fd7dd76.JPG)
-
-![Home-mb](https://user-images.githubusercontent.com/29540686/125395828-a7ac4400-e3e6-11eb-829d-3c38a8c64729.JPG)
-
-![signin-mb](https://user-images.githubusercontent.com/29540686/125395854-b135ac00-e3e6-11eb-9b0f-9681e28a3898.JPG)
-
-![edit-mb](https://user-images.githubusercontent.com/29540686/125395890-bbf04100-e3e6-11eb-8bb0-1aeb586bb8bb.JPG)
-
+## Screenshots of mobile ui
+<img src="https://user-images.githubusercontent.com/29540686/126734368-dd8a963e-0295-4179-ac55-26348da4eded.jpg" width="405" height="720" alt="home-screen">
+<img src="https://user-images.githubusercontent.com/29540686/126734366-d00189a8-3c1c-45aa-a319-28690dd09f05.jpg" width="405" height="720" alt="my posts 1">
+<img src="https://user-images.githubusercontent.com/29540686/126734362-d9b96c4c-f956-4bd2-85db-67174451f143.jpg" width="405" height="720" alt="my posts 2">
+<img src="https://user-images.githubusercontent.com/29540686/126734367-77e7e584-4e80-4927-a46d-199ea663d187.jpg" width="405" height="720" alt="add post">
+<img src="https://user-images.githubusercontent.com/29540686/126734373-99c803f6-82ad-48d6-a449-98fd154e1e72.jpg" width="405" height="720" alt="edit post">
+<img src="https://user-images.githubusercontent.com/29540686/126734369-bdf5cfbb-7942-451e-9368-e62bc11428f3.jpg" width="405" height="720" alt="nav signed">
+<img src="https://user-images.githubusercontent.com/29540686/126734371-193d5764-ae55-418a-908f-db96a150eda5.jpg" width="405" height="720" alt="nav unsigned">
+<img src="https://user-images.githubusercontent.com/29540686/126734372-34339c81-b3d5-4be5-9f06-7d93aff0f1dd.jpg" width="405" height="720" alt="signup">
 
 ## Installation
 This should be used in combination with https://github.com/MattB09/blog_backend
